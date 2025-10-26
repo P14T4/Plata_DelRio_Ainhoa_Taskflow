@@ -1,202 +1,218 @@
+//Problema 1.1
 <?php
-// Problema 1.1:
 $nombre = "Ainhoa";
-$apellido = "Plata";
+$apellidos = "Plata López";
 $edad = 21;
-$altura = 1.65;
-$es_estudiante = true;
+$altura = 1.65; // metros
+$esEstudiante = true;
 
 echo "Nombre: $nombre<br>";
-echo "Apellido: $apellido<br>";
-echo "Edad: $edad años<br>";
+echo "Apellidos: $apellidos<br>";
+echo "Edad: $edad<br>";
 echo "Altura: $altura m<br>";
-echo "¿Es estudiante?: " . ($es_estudiante ? "Sí" : "No") . "<br>";
+echo "¿Es estudiante?: " . ($esEstudiante ? "Sí" : "No") . "<br><br>";
+?>
+//Problema 1.2
+<?php
+$productoNombre = "Auriculares";
+$productoPrecio = 59.99;
+$productoStock = 120;
+$productoOferta = true;
 
-echo "<hr>";
-//Problema 1.2:
-$nombre_producto = "Pc";
-$precio = 803.59;
-$stock_disponible = 2;
-$esta_en_oferta = false;
+echo "Producto: $productoNombre<br>";
+echo "Precio: $productoPrecio €<br>";
+echo "Stock: $productoStock unidades<br>";
+echo "¿En oferta?: " . ($productoOferta ? "Sí" : "No") . "<br><br>";
+?>
+//Problema 1.3
+<?php
+define("NOMBRE_SITIO", "Mi Tienda Online");
+define("VERSION_APP", 1.0);
 
-echo "Nombre del producto: $nombre_producto<br>";
-echo "Precio: $precio €<br>";
-echo "Stock disponible: $stock_disponible unidades<br>";
-echo "¿Está en oferta?: " . ($esta_en_oferta ? "Sí" : "No") . "<br>";
-
-echo "<hr>";
-//Problema 1.3: 
-const nombre_sitio = "Mi Tienda Online";
-const version_app = 1.0;
-
-echo nombre_sitio . "<br>";
-echo version_app;
-
-echo "<hr>";
-//Problema 2.1:
+echo "Sitio: " . NOMBRE_SITIO . "<br>";
+echo "Versión: " . VERSION_APP . "<br><br>";
+?>
+//Problema 2.1
+<?php
 $num1 = 10;
 $num2 = 5;
 
-// Suma
-$suma = $num1 + $num2;
-echo "Suma: $suma<br>";
-
-// Resta
-$resta = $num1 - $num2;
-echo "Resta: $resta<br>";
-
-// Multiplicación
-$multiplicacion = $num1 * $num2;
-echo "Multiplicación: $multiplicacion<br>";
-
-// División
-$division = $num1 / $num2;
-echo "División: $division<br>";
-
-//Problema 2.2:
+echo "Suma: " . ($num1 + $num2) . "<br>";
+echo "Resta: " . ($num1 - $num2) . "<br>";
+echo "Multiplicación: " . ($num1 * $num2) . "<br>";
+echo "División: " . ($num1 / $num2) . "<br><br>";
+?>
+//Problema 2.2
+<?php
 $stock = 100;
-echo "Stock inicial: $stock<br>";
-$stock = $stock - 25;
-echo "Stock después de la venta de 25 unidades: $stock<br>";
-$stock = $stock + 50;
-echo "Stock después de recibir 50 unidades más: $stock<br>";
-//Problema 2.3:
+$stock -= 25; // venta
+echo "Stock tras venta: $stock<br>";
+$stock += 50; // nuevo pedido
+echo "Stock tras nuevo pedido: $stock<br><br>";
+?>
+//Problema 2.3
+<?php
 $nombre = "Oskar";
 $apellido = "Calvo";
 $curso = "Desarrollo Web en Entorno Servidor";
-$fraseCompleta = "El profesor $nombre $apellido imparte el curso de $curso";
-echo $fraseCompleta;
 
-//Problema 2.4:
+$fraseCompleta = "El profesor $nombre $apellido imparte el curso de $curso.";
+echo $fraseCompleta . "<br><br>";
+?>
+//Problema 2.4
+<?php
 $edad = 20;
 $edadMinima = 18;
-var_dump($edad >= $edadMinima); // true si cumple, false si no
-echo "<br>";
+var_dump($edad >= $edadMinima);
+
 $contraseñaGuardada = "1234";
 $contraseñaUsuario = "123";
-var_dump($contraseñaGuardada === $contraseñaUsuario); // true o false
+var_dump($contraseñaGuardada === $contraseñaUsuario);
+echo "<br><br>";
+?>
 
-//Problema 2.5:
+//Problema 2.5
+<?php
 $numero = 7;
 if ($numero % 2 == 0) {
-    echo "El número $numero es par";
+    echo "El número $numero es par<br><br>";
 } else {
-    echo "El número $numero es impar";
+    echo "El número $numero es impar<br><br>";
 }
-
-//Problema 3.1:
+?>
+//Problema 3.1
+<?php
 $edad = 17;
 if ($edad >= 18) {
-    echo "Puedes pasar";
+    echo "Puedes pasar<br><br>";
 } else {
-    echo "No puedes pasar";
+    echo "No puedes pasar<br><br>";
 }
-
-//Problema 3.2:
+?>
+//Problema 3.2
+<?php
 $nota = 7.5;
 if ($nota >= 9) {
-    echo "Sobresaliente";
-} elseif ($nota >= 7 && $nota < 9) {
-    echo "Notable";
-} elseif ($nota >= 5 && $nota < 7) {
-    echo "Aprobado";
+    echo "Sobresaliente<br><br>";
+} elseif ($nota >= 7) {
+    echo "Notable<br><br>";
+} elseif ($nota >= 5) {
+    echo "Aprobado<br><br>";
 } else {
-    echo "Suspenso";
+    echo "Suspenso<br><br>";
 }
-//Problema 3.3:
+?>
+//Problema 3.3
+<?php
 $diaSemana = "lunes";
 switch ($diaSemana) {
     case "lunes":
-        echo "Lentejas";
+        echo "Lentejas<br><br>";
         break;
     case "miércoles":
-        echo "Paella";
+        echo "Paella<br><br>";
         break;
     case "viernes":
-        echo "Pescado al horno";
+        echo "Pescado al horno<br><br>";
         break;
     default:
-        echo "Hoy no hay menú especial";
+        echo "Hoy no hay menú especial<br><br>";
         break;
 }
-
-//Problema 3.4:
+?>
+//Problema 3.4
+<?php
 $rolUsuario = "admin";
 $usuarioActivo = true;
 
 if ($rolUsuario === "admin" && $usuarioActivo) {
-    echo "Acceso concedido";
+    echo "Acceso concedido<br><br>";
 } else {
-    echo "Acceso denegado";
+    echo "Acceso denegado<br><br>";
 }
-
-//Problema 4.1:
-
+?>
+//Problema 4.1
+<?php
 for ($i = 1; $i <= 10; $i++) {
-    $resultado = 7 * $i;
-    echo "7 x $i = $resultado<br>";
+    echo "7 x $i = " . (7 * $i) . "<br>";
 }
-
-//Problema 4.2:
+echo "<br>";
+?>
+//Problema 4.2
+<?php
 $contador = 10;
-
-while ($contador >= 1) {
+while ($contador > 0) {
     echo "$contador<br>";
-    $contador--; // Disminuye el valor en 1 en cada iteración
+    $contador--;
 }
-
-echo "¡Feliz Año Nuevo!";
-
-//Problema 4.3:
+echo "¡Feliz Año Nuevo!<br><br>";
+?>
+//Problema 4.3
+<?php
 $alumnos = ["Ana", "Juan", "Pedro", "Sofía"];
-
 foreach ($alumnos as $alumno) {
     echo "Hola, $alumno<br>";
 }
-
-//Problema 4.4:
+echo "<br>";
+?>
+//Problema 4.4
+<?php
 $productos = [
     ["nombre" => "Teclado", "precio" => 50],
     ["nombre" => "Ratón", "precio" => 25],
     ["nombre" => "Monitor", "precio" => 200]
 ];
+
 foreach ($productos as $producto) {
-    echo "Producto: " . $producto["nombre"] . ", Precio: " . $producto["precio"] . " €<br>";
+    echo "Producto: {$producto['nombre']}, Precio: {$producto['precio']} €<br>";
 }
-
-
-//Problema 5.1:
+echo "<br>";
+?>
+//Problema 5.1
+<?php
 $usuario = [
     "nombre" => "Ainhoa",
     "edad" => 21,
     "email" => "ainhoa@example.com",
-    "estudiante" => true
+    "esEstudiante" => true
 ];
+
 echo "Nombre: " . $usuario["nombre"] . "<br>";
 echo "Edad: " . $usuario["edad"] . "<br>";
 echo "Email: " . $usuario["email"] . "<br>";
-echo "¿Es estudiante?: " . ($usuario["estudiante"] ? "Sí" : "No") . "<br>";
-
-//Problema 5.2:
+echo "¿Estudiante?: " . ($usuario["esEstudiante"] ? "Sí" : "No") . "<br><br>";
+?>
+//Problema 5.2
+<?php
 $notas = [8.5, 4.2, 7.0, 9.8, 5.5, 3.9];
-
 foreach ($notas as $nota) {
     if ($nota >= 5) {
         echo "Nota aprobada: $nota<br>";
     }
 }
-//Problema 5.3:
+echo "<br>";
+?>
+//Problema 5.3
+<?php
 $listaCompra = [
     "Frutas" => ["Manzanas", "Plátanos", "Naranjas"],
     "Lácteos" => ["Leche", "Queso"],
     "Limpieza" => ["Detergente", "Lejía"]
 ];
+
 foreach ($listaCompra as $categoria => $productos) {
     echo "<strong>$categoria:</strong><br>";
     foreach ($productos as $producto) {
         echo "- $producto<br>";
     }
-    echo "<br>";
 }
-
+echo "<br>";
+?>
+//Problema 5.4
+<?php
+$total = 0;
+foreach ($productos as $producto) {
+    $total += $producto['precio'];
+}
+echo "Total del carrito: $total €<br>";
 ?>
