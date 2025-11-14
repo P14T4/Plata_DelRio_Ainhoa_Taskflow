@@ -18,15 +18,15 @@ function renderizarTarea($tarea) {
     $taskClasses = 'task-item';
 
     // Si está completada, añadir clase
-    if ($tarea['completed']) {
+    if (!empty($tarea['completado'])) {
         $taskClasses .= ' completed';
     }
 
     // Añadir la clase de prioridad usando la función anterior
-    $taskClasses .= ' ' . obtenerClasePrioridad($tarea['priority']);
+    $taskClasses .= ' ' . obtenerClasePrioridad($tarea['prioridad'] ?? '');
 
-    // Construir el <li> completo
-    $html = "<li class='$taskClasses'>{$tarea['title']}</li>";
+    // Construir el <li> completo (usamos la clave 'titulo')
+    $html = "<li class='$taskClasses'>{$tarea['titulo']}</li>";
 
     // Devolver el HTML
     return $html;
